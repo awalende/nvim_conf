@@ -1,6 +1,4 @@
-# AstroNvim User Configuration Example
-
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+# AstroNvim Custom Configuration repository
 
 ## 🛠️ Installation
 
@@ -11,22 +9,29 @@ mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 
+#### Build custom venv
+
+We create a new venv in our home repo.
+This config uses this venv mainly for the ansible-language-server.
+
+```shell
+mkdir -p ~/venvs
+cd ~/venvs
+python3 -m venv nvim
+source ~/venvs/nvim/bin/activate
+pip install pynvim ansible==4.10.0
+```
+
 #### Clone AstroNvim
 
 ```shell
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/user
+git clone https://github.com/awalende/nvim_conf ~/.config/nvim/lua/user
 ```
 
 #### Start Neovim
