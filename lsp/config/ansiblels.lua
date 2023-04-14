@@ -2,18 +2,18 @@ return {
   settings = {
     ansible = {
       ansible = {
-        path = "ansible"
+        path = "~/venvs/nvim/bin/ansible"
       },
       executionEnvironment = {
         enabled = false
       },
       python = {
-        interpreterPath = "python"
+        interpreterPath = "~/venvs/nvim/bin/python3"
       },
       validation = {
         enabled = true,
         lint = {
-          enabled = false,
+          enabled = true,
           path = "ansible-lint"
         }
       }
